@@ -6,7 +6,7 @@ module.exports = async (req, res) => {
   const { id, scores, hide_title, dark_mode, card_width = 500 } = req.query;
 
   res.setHeader("Content-Type", "image/svg+xml");
-  res.setHeader("Cache-Control", "public, max-age=43200"); // 43200s（12h） cache
+  res.setHeader("Cache-Control", "public, max-age=100"); // 43200s（12h） cache
 
   const regNum = /^[1-9]\d*$/;
   const clamp = (min, max, n) => Math.max(min, Math.min(max, n));
